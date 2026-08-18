@@ -1,8 +1,5 @@
-# Afyktos — Landing
+# Afyktos
 
-Single-screen landing page for https://afyktos.github.io/
+Official portfolio site for Afyktos.
 
-- Music → /music/
-- Art & Design → /art/
-- No scrolling
-- Uses the original Afyktos logo from the Art portfolio
+© 2026 Afyktos. All rights reserved. Artwork, visual assets, music-related materials and site presentation may not be reproduced or redistributed without permission.
