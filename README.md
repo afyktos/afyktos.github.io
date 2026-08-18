@@ -1,10 +1,8 @@
 # Afyktos — Landing
 
-Main landing page for `https://afyktos.github.io/`.
+Single-screen landing page for https://afyktos.github.io/
 
-Links:
-- Music: `/music/`
-- Art & Design: `/art/`
-
-## GitHub Pages
-Create a repository named exactly `afyktos.github.io`, upload these files to the repository root, then enable GitHub Pages from `main` / `(root)` if needed.
+- Music → /music/
+- Art & Design → /art/
+- No scrolling
+- Uses the original Afyktos logo from the Art portfolio
