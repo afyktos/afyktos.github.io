@@ -1,0 +1,32 @@
+:root{
+  --bg:#090909;
+  --fg:#f1f1ed;
+  --muted:#8b8b84;
+  --line:#2a2a28;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Manrope,Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E")}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--line)}
+.brand{font-family:Anton,sans-serif;font-size:28px;letter-spacing:.02em}
+.header-note,.eyebrow,.kicker,.index,.links a,footer{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.13em}
+.header-note{color:var(--muted)}
+main{padding:0 28px}
+.hero{padding:10vh 0 7vh;max-width:1300px}
+.eyebrow{color:var(--muted);margin-bottom:18px}
+h1{margin:0;line-height:.84;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(72px,13vw,220px);letter-spacing:-.02em}
+h1 span{display:block}.outline{-webkit-text-stroke:1px var(--fg);color:transparent}
+.intro{max-width:560px;margin:30px 0 0;color:#b7b7b0;font-size:15px;line-height:1.6}
+.portals{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.portal{min-height:420px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s ease,color .25s ease,transform .25s ease;position:relative;overflow:hidden}
+.portal:before{content:"";position:absolute;inset:auto 0 0 0;height:0;background:var(--fg);transition:height .3s ease;z-index:0}
+.portal>*{position:relative;z-index:1}.portal:hover:before{height:100%}.portal:hover{color:var(--bg)}
+.portal-top{display:flex;justify-content:space-between}.arrow{font-size:24px;transition:transform .25s ease}.portal:hover .arrow{transform:translate(4px,-4px)}
+.portal-copy .kicker{color:var(--muted);margin-bottom:12px}.portal:hover .kicker{color:#555}
+.portal h2{font-family:Anton,sans-serif;font-size:clamp(58px,8vw,132px);font-weight:400;line-height:.9;margin:0 0 22px;text-transform:uppercase;letter-spacing:-.02em}
+.portal p{max-width:430px;margin:0;color:#a6a69f;line-height:1.6;font-size:14px}.portal:hover p{color:#333}
+.links{display:flex;flex-wrap:wrap;gap:0;padding:34px 0 70px}.links a{border:1px solid var(--line);padding:14px 18px;margin-right:-1px;margin-bottom:-1px;transition:.2s}.links a:hover{background:var(--fg);color:var(--bg)}
+footer{display:flex;justify-content:space-between;padding:20px 28px;border-top:1px solid var(--line);color:var(--muted)}
+@media (max-width:800px){.site-header{padding:18px}.header-note{display:none}main{padding:0 18px}.hero{padding:8vh 0 6vh}.portals{grid-template-columns:1fr}.portal{min-height:300px;padding:20px}.portal h2{font-size:clamp(56px,18vw,96px)}.links{padding-bottom:46px}footer{padding:18px;gap:20px;flex-direction:column}}
