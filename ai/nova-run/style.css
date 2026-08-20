@@ -377,3 +377,166 @@ img,video{max-width:100%}
   .section-head h2{font-size:clamp(72px,8vw,100px)!important}
   .stage img{object-fit:contain!important}
 }
+
+/* ==========================================================
+   TRUE FINAL RESPONSIVE OVERRIDE — 2026-08-20
+   Purpose: guarantee correct framing at every viewport and
+   eliminate stale/conflicting earlier breakpoint behavior.
+   ========================================================== */
+
+/* Base safety */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.hero,.hero-media,.hero-copy,.colors,.color-layout,.stage{min-width:0}
+.hero-media{display:grid!important;place-items:center!important;overflow:hidden!important}
+.hero-media img{
+  display:block!important;
+  position:static!important;
+  transform:none!important;
+  margin:auto!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Product colorway photography: NEVER crop the shoe. */
+.stage{display:grid!important;place-items:center!important;overflow:hidden!important;background:#d8d8d5!important}
+.stage img{
+  display:block!important;
+  position:static!important;
+  transform:none!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* PHONE — 0–599 */
+@media (max-width:599px){
+  header{height:64px!important;padding:0 18px!important;grid-template-columns:1fr auto!important}
+  header nav{display:none!important}
+  .brand img{width:96px!important;height:auto!important}
+  .edition{font-size:7px!important;max-width:45vw!important}
+
+  .hero{display:grid!important;grid-template-columns:1fr!important;height:auto!important;min-height:0!important;max-height:none!important}
+  .hero-copy{padding:52px 18px 40px!important;min-height:0!important}
+  .hero h1{font-size:clamp(58px,20vw,86px)!important;line-height:.80!important}
+  .lede{font-size:15px!important;line-height:1.48!important;margin:28px 0!important}
+  .meta{gap:10px 16px!important;flex-wrap:wrap!important}
+  .hero-media{width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:1/1!important;padding:7vw!important;background:#d4d4d1!important}
+  .hero-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+
+  .statement{padding:58px 18px!important;display:block!important}
+  .statement>div{margin-top:34px!important}
+
+  .action{display:grid!important;grid-template-columns:1fr!important;min-height:0!important}
+  .action>img{width:100%!important;height:auto!important;aspect-ratio:4/5!important;object-fit:cover!important}
+  .action-copy{padding:58px 18px!important}
+
+  .colors{padding:58px 18px!important}
+  .section-head{display:block!important;margin-bottom:30px!important}
+  .section-head h2{font-size:clamp(52px,15.5vw,74px)!important;line-height:.83!important}
+  .section-head>p{margin-top:22px!important;max-width:none!important;text-align:left!important}
+  .color-layout{grid-template-columns:1fr!important;gap:20px!important}
+  .stage{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:4/3!important;padding:5vw!important}
+  .stage img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .color-name{left:12px!important;bottom:12px!important;z-index:3!important}
+  .swatches{display:grid!important;grid-template-columns:1fr 1fr!important}
+  .swatch{min-width:0!important;padding:17px 5px!important;font-size:12px!important}
+
+  .motion{grid-template-columns:1fr!important;padding:62px 18px!important;gap:32px!important}
+  .spin-viewer{width:100%!important;aspect-ratio:1/1!important;min-height:0!important}
+  .spin-viewer img{width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important}
+  .spec{grid-template-columns:1fr!important;padding:0 18px 58px!important}
+
+  .final{display:grid!important;grid-template-columns:1fr!important;height:auto!important;min-height:0!important}
+  .final-media{height:auto!important;min-height:0!important;aspect-ratio:4/5!important;order:2!important}
+  .final-media video{width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important}
+  .final>div:not(.final-media){padding:58px 18px!important;min-height:0!important}
+}
+
+/* TABLET PORTRAIT — 600–899
+   IMPORTANT: image stays full and centered; no giant crop. */
+@media (min-width:600px) and (max-width:899px){
+  header{height:68px!important;padding:0 26px!important;grid-template-columns:1fr auto!important}
+  header nav{display:none!important}
+  .brand img{width:auto!important;height:38px!important;max-width:154px!important}
+
+  .hero{
+    display:grid!important;
+    grid-template-columns:43% 57%!important;
+    width:100%!important;
+    height:calc(100svh - 68px)!important;
+    min-height:620px!important;
+    max-height:820px!important;
+    overflow:hidden!important;
+  }
+  .hero-copy{padding:48px 24px 42px!important;justify-content:center!important;min-height:0!important}
+  .hero h1{font-size:clamp(70px,10.8vw,102px)!important;line-height:.79!important}
+  .lede{font-size:14px!important;line-height:1.48!important;max-width:300px!important;margin:28px 0!important}
+  .meta{font-size:8px!important;gap:9px 14px!important;flex-wrap:wrap!important}
+  .hero-media{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    padding:5.5%!important;
+    background:#d4d4d1!important;
+  }
+  .hero-media img{
+    width:100%!important;
+    height:100%!important;
+    max-width:100%!important;
+    max-height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  .statement{padding:70px 28px!important}
+  .action{display:grid!important;grid-template-columns:52% 48%!important;min-height:620px!important}
+  .action>img{width:100%!important;height:100%!important;object-fit:cover!important}
+  .action-copy{padding:60px 34px!important}
+
+  .colors{padding:72px 28px!important}
+  .section-head{display:grid!important;grid-template-columns:minmax(0,1fr) 150px!important;gap:28px!important;align-items:end!important}
+  .section-head h2{font-size:clamp(62px,9.4vw,86px)!important;line-height:.82!important}
+  .section-head>p{text-align:right!important;line-height:1.45!important}
+  .color-layout{grid-template-columns:1fr!important;gap:22px!important}
+  .stage{width:100%!important;height:auto!important;aspect-ratio:16/10!important;padding:3.5%!important}
+  .stage img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .swatches{display:grid!important;grid-template-columns:1fr 1fr!important}
+
+  .motion{grid-template-columns:1fr!important;padding:72px 28px!important;gap:36px!important}
+  .spin-viewer{width:100%!important;aspect-ratio:16/10!important;min-height:0!important}
+  .spin-viewer img{width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important}
+
+  .spec{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:0 28px 72px!important}
+
+  .final{display:grid!important;grid-template-columns:54% 46%!important;height:auto!important;min-height:620px!important}
+  .final-media{height:620px!important;min-height:0!important;aspect-ratio:auto!important;order:initial!important}
+  .final-media video{height:100%!important;min-height:0!important;object-fit:cover!important}
+  .final>div:not(.final-media){padding:62px 32px!important;min-height:0!important}
+}
+
+/* TABLET LANDSCAPE / SMALL LAPTOP — 900–1199 */
+@media (min-width:900px) and (max-width:1199px){
+  .hero{grid-template-columns:41% 59%!important;min-height:calc(100vh - 76px)!important}
+  .hero-copy{padding:7vh 30px 4vh!important}
+  .hero h1{font-size:clamp(78px,9.2vw,118px)!important}
+  .hero-media{padding:4%!important}
+  .hero-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+
+  .color-layout{grid-template-columns:minmax(0,1fr) 220px!important}
+  .stage{aspect-ratio:16/9!important;padding:2.5%!important}
+  .stage img{object-fit:contain!important}
+}
+
+/* DESKTOP — 1200+ : preserve original composition, but still never crop hero/product. */
+@media (min-width:1200px){
+  .hero-media{padding:2.5%!important}
+  .hero-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .stage{padding:1.5%!important}
+  .stage img{object-fit:contain!important}
+}
