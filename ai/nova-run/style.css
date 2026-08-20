@@ -173,3 +173,207 @@ img,video{max-width:100%}
   .stage img{object-fit:contain!important}
   .swatch{font-size:12px}
 }
+
+/* ============================================================
+   FINAL TABLET / CROSS-DEVICE OVERRIDE — 2026-08-20
+   Fixes the oversized stacked tablet hero while keeping:
+   - phone layout stacked
+   - desktop layout unchanged
+   - all product photography fully visible
+   ============================================================ */
+
+/* TABLET PORTRAIT + SMALL TABLET LANDSCAPE */
+@media (min-width:600px) and (max-width:900px){
+  header{
+    height:68px!important;
+    padding:0 26px!important;
+    grid-template-columns:1fr auto!important;
+  }
+  header nav{display:none!important}
+  .brand img{
+    width:auto!important;
+    height:38px!important;
+    max-width:154px!important;
+  }
+  .edition{font-size:8px!important}
+
+  /* Keep the hero editorial instead of turning it into two huge stacked screens. */
+  .hero{
+    min-height:640px!important;
+    height:calc(100svh - 68px)!important;
+    max-height:820px!important;
+    display:grid!important;
+    grid-template-columns:44% 56%!important;
+    align-items:stretch!important;
+  }
+  .hero-copy{
+    min-height:0!important;
+    padding:56px 26px 46px!important;
+    justify-content:center!important;
+  }
+  .hero h1{
+    font-size:clamp(76px,11.8vw,108px)!important;
+    line-height:.79!important;
+  }
+  .lede{
+    max-width:310px!important;
+    margin:30px 0!important;
+    font-size:14px!important;
+    line-height:1.5!important;
+  }
+  .meta{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:9px 16px!important;
+    font-size:8px!important;
+  }
+  .hero-media{
+    min-height:0!important;
+    height:auto!important;
+    background:#d4d4d1!important;
+  }
+  .hero-media img{
+    width:88%!important;
+    height:88%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  .statement{
+    padding:72px 28px!important;
+    display:flex!important;
+    gap:36px!important;
+    align-items:flex-end!important;
+  }
+  .statement>p{font-size:clamp(56px,8vw,78px)!important}
+  .statement>div{margin-top:0!important;max-width:280px!important}
+
+  .action{
+    display:grid!important;
+    grid-template-columns:52% 48%!important;
+    min-height:650px!important;
+  }
+  .action img{
+    width:100%!important;
+    height:100%!important;
+    max-height:none!important;
+    object-fit:cover!important;
+  }
+  .action-copy{padding:64px 36px!important}
+  .action h2{font-size:clamp(54px,7.8vw,76px)!important}
+
+  .colors{padding:76px 28px!important}
+  .section-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    gap:28px!important;
+    align-items:end!important;
+  }
+  .section-head h2{
+    font-size:clamp(66px,10.2vw,92px)!important;
+    line-height:.82!important;
+  }
+  .section-head>p{
+    max-width:150px!important;
+    line-height:1.5!important;
+    text-align:right!important;
+  }
+  .color-layout{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:22px!important;
+  }
+  .stage{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:16/9!important;
+  }
+  .stage img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+  .swatches{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+  }
+  .swatch{padding:18px 8px!important}
+
+  .motion{
+    padding:76px 28px!important;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:38px!important;
+  }
+  .motion h2{font-size:clamp(62px,9.5vw,88px)!important}
+  .spin-viewer{
+    width:100%!important;
+    min-height:0!important;
+    margin-top:0!important;
+    aspect-ratio:16/10!important;
+  }
+  .spin-viewer img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+
+  .spec{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    padding:0 28px 76px!important;
+  }
+  .spec div{padding-right:22px!important}
+
+  .final{
+    display:grid!important;
+    grid-template-columns:55% 45%!important;
+    min-height:680px!important;
+  }
+  .final-media{
+    order:initial!important;
+    min-height:680px!important;
+    aspect-ratio:auto!important;
+  }
+  .final-media video{
+    min-height:680px!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+  .final>div:not(.final-media){
+    min-height:0!important;
+    padding:70px 34px!important;
+  }
+  .final h2{font-size:clamp(66px,9.2vw,88px)!important}
+
+  footer{padding:26px 28px!important}
+}
+
+/* PHONES: preserve the stacked mobile layout and never crop the colorway product. */
+@media (max-width:599px){
+  .stage{
+    width:100%!important;
+    min-height:0!important;
+    aspect-ratio:4/3!important;
+  }
+  .stage img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+}
+
+/* LARGE TABLETS / SMALL LAPTOPS: prevent cramped typography without changing desktop structure. */
+@media (min-width:901px) and (max-width:1100px){
+  .hero-copy{padding-left:30px!important;padding-right:26px!important}
+  .hero h1{font-size:clamp(84px,9.2vw,112px)!important}
+  .lede{font-size:15px!important;max-width:340px!important}
+  .section-head h2{font-size:clamp(72px,8vw,100px)!important}
+  .stage img{object-fit:contain!important}
+}
