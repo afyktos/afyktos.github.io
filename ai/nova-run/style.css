@@ -123,3 +123,53 @@ img,video{max-width:100%}
   .final-media,.final-media video{aspect-ratio:4/5}.final>div:not(.final-media){padding:58px 18px}.final h2{font-size:clamp(54px,16vw,78px)}
   footer{padding:26px 18px;display:grid;grid-template-columns:1fr;gap:9px;font-size:8px}
 }
+
+/* === FINAL RESPONSIVE QA / 2026-08-20 ===
+   Product photography must always remain fully visible.
+   Breakpoints are tuned for phone, tablet, laptop and desktop. */
+.stage{
+  overflow:hidden;
+  background:#d8d8d5;
+}
+.stage img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Tablet: stack product and controls before the layout gets cramped. */
+@media (min-width:701px) and (max-width:900px){
+  .colors{padding:72px 28px}
+  .section-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end}
+  .section-head h2{font-size:clamp(62px,10vw,88px)}
+  .color-layout{grid-template-columns:1fr;gap:24px}
+  .stage{aspect-ratio:16/10}
+  .swatches{display:grid;grid-template-columns:1fr 1fr}
+  .swatch{padding:18px 8px}
+}
+
+/* Phone: keep the full 16:9 source inside a taller, premium product canvas. */
+@media (max-width:700px){
+  .colors{padding-left:18px;padding-right:18px}
+  .stage{
+    aspect-ratio:4/3!important;
+    width:100%;
+    min-height:0!important;
+    background:#d8d8d5;
+  }
+  .stage img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+  .color-name{z-index:2}
+}
+
+/* Very narrow phones: slightly more vertical breathing room without cropping the shoe. */
+@media (max-width:390px){
+  .stage{aspect-ratio:1/1!important}
+  .stage img{object-fit:contain!important}
+  .swatch{font-size:12px}
+}
