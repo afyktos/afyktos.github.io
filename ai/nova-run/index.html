@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NOVA RUN — Afyktos</title>
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="description" content="NOVA RUN — an AI-assisted performance footwear concept by Afyktos. Image, motion and art direction.">
+<meta name="theme-color" content="#e8e8e4">
+<meta property="og:title" content="NOVA RUN — Afyktos">
+<meta property="og:description" content="AI-assisted footwear concept — image, motion and art direction by Afyktos.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/nova-run-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/nova-run-thumbnail.webp">
+<link rel="preload" as="image" href="assets/hero-nova.webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><a class="brand" href="../" aria-label="Afyktos"><img src="assets/afyktos-logo.png" alt="Afyktos"></a><nav><a href="#model">MODEL</a><a href="#colorways">COLORWAYS</a><a href="#motion">MOTION</a></nav><span class="edition">CONCEPT / 2026</span></header>
+<main>
+<section class="hero" id="model"><div class="hero-copy"><p class="eyebrow">AFYKTOS PERFORMANCE / 01</p><h1>NOVA<br>RUN.</h1><p class="lede">A speculative performance footwear study built around speed, sculpted volume and forward motion.</p><div class="meta"><span>ROAD / DAILY</span><span>4 COLORWAYS</span><span>AI-ASSISTED DESIGN</span></div></div><div class="hero-media"><img id="heroShoe" src="assets/hero-nova.webp" alt="Nova Run sneaker" width="1024" height="1024" fetchpriority="high" decoding="async"></div></section>
+<section class="statement"><p>SHAPED BY<br>MOVEMENT.</p><div>Concept footwear / visual development / motion direction<br><small>Not a commercial product.</small></div></section>
+<section class="action"><img src="assets/action.webp" alt="Runner wearing concept footwear" loading="lazy" decoding="async"><div class="action-copy"><p class="eyebrow">FORM IN MOTION</p><h2>BUILT AROUND<br>THE STRIDE.</h2><p>The exaggerated heel geometry and continuous side profile turn a running silhouette into a visual object — technical, aggressive and clean.</p></div></section>
+<section class="colors" id="colorways"><div class="section-head"><div><p class="eyebrow">THE SERIES</p><h2>CHOOSE YOUR<br>COLORWAY.</h2></div><p>One silhouette. Four identities.</p></div><div class="color-layout"><div class="stage"><img id="colorImage" src="assets/og.webp" alt="Selected Nova Run colorway" loading="lazy" decoding="async"><div class="color-name"><span id="colorIndex">01</span><strong id="colorTitle">CHROME MIST</strong></div></div><div class="swatches">
+<button class="swatch active" data-img="assets/og.webp" data-name="CHROME MIST" data-num="01"><i class="mist"></i><span>Chrome Mist</span></button>
+<button class="swatch" data-img="assets/black.webp" data-name="VOID BLACK" data-num="02"><i class="black"></i><span>Void Black</span></button>
+<button class="swatch" data-img="assets/green.webp" data-name="ACID DEW" data-num="03"><i class="green"></i><span>Acid Dew</span></button>
+<button class="swatch" data-img="assets/pink.webp" data-name="ROSE PULSE" data-num="04"><i class="pink"></i><span>Rose Pulse</span></button>
+</div></div></section>
+<section class="motion" id="motion"><div class="motion-copy"><p class="eyebrow">360 / INTERACTIVE STUDY</p><h2>EVERY ANGLE<br>MATTERS.</h2><p>Take control of the silhouette. Drag left or right to inspect the Nova Run from every angle.</p><div class="drag-note"><span>↔</span> DRAG / SWIPE TO ROTATE</div></div><div class="spin-viewer" id="spinViewer" aria-label="Interactive 360 degree Nova Run viewer"><img id="spinFrame" src="assets/spin/frame_01.webp" draggable="false" alt="Nova Run interactive 360 view"><div class="spin-badge"><strong>360°</strong><small>VIEW</small></div><div class="spin-ui"><span>0°</span><div class="spin-line"><i id="spinProgress"></i></div><span>360°</span></div></div></section>
+<section class="spec"><div><span>01</span><h3>SCULPTED CUSHION</h3><p>Oversized heel volume creates a planted, aerodynamic profile.</p></div><div><span>02</span><h3>FLOW UPPER</h3><p>Layered technical surfaces follow one continuous directional line.</p></div><div><span>03</span><h3>FORWARD GEOMETRY</h3><p>Sharp transitions and a lifted toe communicate movement at rest.</p></div></section>
+<section class="final"><div class="final-media"><video autoplay muted loop playsinline preload="metadata" poster="assets/final-motion-poster.webp" aria-label="Nova Run motion study"><source src="assets/final-motion.mp4" type="video/mp4"></video></div><div><p class="eyebrow">NOVA RUN / 2026</p><h2>FUTURE<br>IN MOTION.</h2><a href="../">← BACK TO PROJECTS</a></div></section>
+</main><footer class="site-footer"><a href="mailto:afyktos@gmail.com">AFYKTOS@GMAIL.COM ↗</a><span>AI-ASSISTED CREATIVE WORK / 2026</span><span>© AFYKTOS. ALL RIGHTS RESERVED.</span></footer>
+<script>
+document.querySelectorAll('.swatch').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.swatch').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  const im=document.getElementById('colorImage');
+  im.style.opacity=.12;
+  setTimeout(()=>{im.src=b.dataset.img;document.getElementById('colorTitle').textContent=b.dataset.name;document.getElementById('colorIndex').textContent=b.dataset.num;im.style.opacity=1},140);
+}));
+
+// Smooth 360° image-sequence viewer — drag/swipe with interpolation + inertia.
+const totalFrames=72;
+const viewer=document.getElementById('spinViewer');
+const frame=document.getElementById('spinFrame');
+const progress=document.getElementById('spinProgress');
+const frameUrls=Array.from({length:totalFrames},(_,i)=>`assets/spin/frame_${String(i+1).padStart(2,'0')}.webp`);
+const cache=[];
+function preloadAround(center,radius=8){
+  for(let n=-radius;n<=radius;n++){
+    const i=((Math.round(center)+n)%totalFrames+totalFrames)%totalFrames;
+    if(cache[i]) continue;
+    const im=new Image(); im.decoding='async'; im.src=frameUrls[i]; cache[i]=im;
+  }
+}
+let current=0,target=0,velocity=0,dragging=false,lastX=0,lastT=0,raf=0,lastRendered=-1;
+const sensitivity=0.105;
+const wrap=n=>((n%totalFrames)+totalFrames)%totalFrames;
+function render(){
+  const pos=wrap(current),idx=Math.round(pos)%totalFrames;
+  preloadAround(idx);
+  if(idx!==lastRendered){frame.src=frameUrls[idx];lastRendered=idx;}
+  progress.style.width=(pos/(totalFrames-1)*100)+'%';
+}
+function tick(){
+  if(dragging){current+=(target-current)*0.34;}
+  else{target+=velocity;velocity*=0.935;current+=(target-current)*0.22;if(Math.abs(velocity)<0.0015)velocity=0;}
+  render();
+  if(dragging||Math.abs(target-current)>.0015||Math.abs(velocity)>.0015)raf=requestAnimationFrame(tick);else raf=0;
+}
+function startTick(){if(!raf)raf=requestAnimationFrame(tick);}
+viewer.addEventListener('pointerdown',e=>{
+  dragging=true;velocity=0;lastX=e.clientX;lastT=performance.now();
+  viewer.classList.add('dragging','used');viewer.setPointerCapture?.(e.pointerId);startTick();e.preventDefault();
+});
+viewer.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  const now=performance.now(),dx=e.clientX-lastX,dt=Math.max(8,now-lastT),delta=-dx*sensitivity;
+  target+=delta;velocity=(delta/(dt/16.667))*.72;lastX=e.clientX;lastT=now;startTick();e.preventDefault();
+});
+function release(e){
+  if(!dragging)return;dragging=false;viewer.classList.remove('dragging');viewer.releasePointerCapture?.(e.pointerId);
+  velocity=Math.max(-1.1,Math.min(1.1,velocity));startTick();
+}
+viewer.addEventListener('pointerup',release);
+viewer.addEventListener('pointercancel',release);
+viewer.addEventListener('dragstart',e=>e.preventDefault());
+preloadAround(0,12);render();
+</script></body></html>

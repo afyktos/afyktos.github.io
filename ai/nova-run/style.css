@@ -1,0 +1,82 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2f2ef;color:#0b0b0b;font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}header{height:76px;padding:0 3.5vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid #c9c9c4;position:relative;z-index:5;background:#f2f2ef}.brand{font-weight:900;font-size:20px;letter-spacing:-1px}nav{display:flex;gap:34px;font-size:11px;font-weight:700;letter-spacing:1.3px}.edition{text-align:right;font:10px monospace;letter-spacing:1px}.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:42% 58%;overflow:hidden}.hero-copy{padding:9vh 3.5vw 4vh;display:flex;flex-direction:column;justify-content:center}.eyebrow{font:10px monospace;letter-spacing:1.5px;margin:0 0 28px}.hero h1,.section-head h2,.action h2,.motion h2,.final h2{font-size:clamp(72px,10vw,180px);line-height:.78;letter-spacing:-.075em;margin:0;font-weight:900}.lede{max-width:420px;font-size:17px;line-height:1.45;margin:45px 0}.meta{display:flex;gap:25px;font:9px monospace;letter-spacing:1px}.hero-media{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 54%,#fff 0,#dededb 38%,#bdbdb9 100%);overflow:hidden}.hero-media img{width:92%;position:relative;z-index:2}.ghost{position:absolute;font-weight:900;font-size:18vw;letter-spacing:-.08em;color:#c8c8c4;bottom:2%;left:-2%;z-index:1}.statement{background:#0b0b0b;color:#f4f4ef;padding:10vh 3.5vw;display:flex;justify-content:space-between;align-items:flex-end}.statement>p{font-weight:900;font-size:clamp(40px,6vw,100px);line-height:.9;letter-spacing:-.05em;margin:0}.statement>div{font-size:12px;line-height:1.7;max-width:330px}.statement small{opacity:.5}.action{display:grid;grid-template-columns:60% 40%;min-height:100vh;background:#161616;color:white}.action img{width:100%;height:100%;object-fit:cover}.action-copy{padding:9vw 5vw;display:flex;flex-direction:column;justify-content:center}.action h2{font-size:clamp(55px,6vw,110px)}.action-copy>p:last-child{max-width:400px;line-height:1.6;color:#aaa;margin-top:45px}.colors{padding:12vh 3.5vw;background:#e8e8e4}.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:6vh}.section-head h2{font-size:clamp(65px,8vw,135px)}.section-head>p{font:11px monospace}.color-layout{display:grid;grid-template-columns:1fr 260px;gap:25px}.stage{min-height:68vw;max-height:850px;position:relative;background:radial-gradient(circle,#fff,#d1d1cd);display:flex;align-items:center;overflow:hidden}.stage img{width:100%;transition:opacity .18s}.color-name{position:absolute;left:30px;bottom:28px;display:flex;gap:18px;align-items:baseline}.color-name span{font:11px monospace}.color-name strong{font-size:25px}.swatches{display:flex;flex-direction:column}.swatch{border:0;border-top:1px solid #b9b9b4;background:transparent;padding:24px 4px;display:grid;grid-template-columns:30px 1fr;gap:15px;align-items:center;text-align:left;font-weight:700;cursor:pointer;opacity:.45}.swatch:last-child{border-bottom:1px solid #b9b9b4}.swatch.active{opacity:1}.swatch i{width:22px;height:22px;border-radius:50%;border:1px solid #777}.mist{background:#bfc5c4}.black{background:#111}.green{background:#d9f29d}.pink{background:#ef9eb5}.motion{background:#0a0a0a;color:white;padding:12vh 3.5vw;display:grid;grid-template-columns:32% 68%;gap:4vw;align-items:center}.motion h2{font-size:clamp(55px,6vw,110px)}.motion-copy>p:last-child{color:#888;line-height:1.6;max-width:360px;margin-top:40px}.spin-viewer{width:100%;position:relative;background:#151515;overflow:hidden;cursor:grab;user-select:none;touch-action:none}.spin-viewer.dragging{cursor:grabbing}.spin-viewer img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;pointer-events:none}.spin-viewer:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 80px rgba(0,0,0,.14);pointer-events:none}.drag-note{margin-top:34px;font:10px monospace;letter-spacing:1.4px;color:#ddd;display:flex;align-items:center;gap:12px}.drag-note span{font-size:19px}.spin-ui{position:absolute;z-index:2;left:22px;right:22px;bottom:18px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;color:#111;font:9px monospace;letter-spacing:1px}.spin-line{height:1px;background:rgba(0,0,0,.22);overflow:hidden}.spin-line i{display:block;height:100%;width:2%;background:#111;transition:width .05s linear}.spec{display:grid;grid-template-columns:repeat(3,1fr);padding:0 3.5vw 12vh;background:#0a0a0a;color:white}.spec div{padding:45px 30px 20px 0;border-top:1px solid #444}.spec span{font:10px monospace;color:#777}.spec h3{font-size:20px;margin:25px 0 15px}.spec p{font-size:13px;line-height:1.6;color:#888;max-width:300px}.final{min-height:90vh;display:grid;grid-template-columns:58% 42%;align-items:center;background:#dadad6;overflow:hidden}.final-media{height:100%;min-height:90vh;overflow:hidden;background:#111}.final-media video{width:100%;height:100%;min-height:90vh;object-fit:cover;display:block;filter:blur(1.15px) saturate(.92) contrast(.98);transform:scale(1.018)}.final h2{font-size:clamp(70px,8vw,140px)}.final a{display:inline-block;margin-top:55px;border-bottom:1px solid;padding-bottom:5px;font:11px monospace}footer{height:100px;background:#0a0a0a;color:#777;display:flex;align-items:center;justify-content:space-between;padding:0 3.5vw;font:9px monospace;letter-spacing:1px}@media(max-width:800px){header{grid-template-columns:1fr 1fr}nav{display:none}.hero,.action,.motion,.final{grid-template-columns:1fr}.hero-copy{min-height:55vh}.hero-media{min-height:55vh}.statement{display:block}.statement>div{margin-top:50px}.color-layout{grid-template-columns:1fr}.stage{min-height:90vw}.swatches{display:grid;grid-template-columns:1fr 1fr}.motion{padding-top:10vh}.spin-viewer{margin-top:40px}.spec{grid-template-columns:1fr}.final>div{padding:12vh 6vw}.final-media{order:2;min-height:60vh}.final-media video{min-height:60vh}.edition{font-size:8px}}
+
+/* --- V3 refinements --- */
+.brand{display:flex;align-items:center;width:max-content;height:100%}.brand img{display:block;width:112px;height:auto;max-height:48px;object-fit:contain}
+.hero-media{background:#d4d4d1}.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;position:relative;z-index:2}
+.statement>p{max-width:1050px}
+
+/* Keep the entire colorway configurator legible in one desktop viewport. */
+.colors{padding:7vh 3.5vw 8vh}.section-head{margin-bottom:3.5vh}.section-head .eyebrow{margin-bottom:15px}.section-head h2{font-size:clamp(58px,6.8vw,108px);line-height:.82}.color-layout{grid-template-columns:minmax(0,1fr) 250px;gap:22px;align-items:stretch}.stage{height:58vh;min-height:470px;max-height:650px;justify-content:center}.stage img{width:88%;height:88%;object-fit:contain;transition:opacity .18s}.swatch{padding:20px 4px}
+
+/* More obvious + smoother 360 interaction. */
+.motion{grid-template-columns:33% 67%;gap:3vw;padding:9vh 3.5vw}.motion-copy{align-self:center}.spin-viewer{min-height:min(72vh,760px);background:#d8d8d5;cursor:ew-resize}.spin-viewer img{width:100%;height:100%;min-height:min(72vh,760px);aspect-ratio:auto;object-fit:cover}.spin-viewer.dragging{cursor:grabbing}.spin-viewer:not(.used) .spin-badge{animation:pulse360 1.8s ease-in-out infinite}.spin-badge{position:absolute;z-index:4;top:24px;right:24px;background:rgba(10,10,10,.88);color:white;border-radius:999px;padding:12px 17px;display:grid;grid-template-columns:auto auto;column-gap:9px;align-items:center;pointer-events:none;backdrop-filter:blur(8px)}.spin-badge .spin-arrows{font-size:19px;grid-row:1/3}.spin-badge strong{font:700 12px monospace;letter-spacing:1px}.spin-badge small{font:8px monospace;letter-spacing:1.2px;opacity:.7;margin-top:2px}.spin-ui{left:24px;right:24px;bottom:20px}.spin-line i{transition:none}.angle-dial{width:150px;height:150px;margin-top:30px;position:relative;display:grid;place-items:center}.dial-ring{position:absolute;inset:0;border:1px dashed #555;border-radius:50%}.dial-ring i{position:absolute;left:50%;top:-4px;width:2px;height:15px;background:#fff;transform-origin:50% 79px;transition:transform .08s linear}.dial-copy{text-align:center;display:flex;flex-direction:column;gap:4px}.dial-copy strong{font:32px monospace;font-weight:400}.dial-copy span{font:8px monospace;letter-spacing:1.4px;color:#888}.drag-note{font-weight:700}.drag-note span{animation:nudgeArrow 1.4s ease-in-out infinite}
+@keyframes pulse360{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.035);opacity:1}}@keyframes nudgeArrow{0%,100%{transform:translateX(0)}35%{transform:translateX(-4px)}70%{transform:translateX(4px)}}
+
+/* Original motion clip: no artificial blur/filter. */
+.final-media video{filter:none;transform:none}
+
+@media(max-width:800px){.brand img{width:92px}.colors{padding-top:8vh}.stage{height:62vh;min-height:420px}.stage img{width:94%;height:94%}.motion{grid-template-columns:1fr}.spin-viewer,.spin-viewer img{min-height:58vh}.angle-dial{width:126px;height:126px}.dial-ring i{transform-origin:50% 67px}}
+
+/* --- V4 final polish --- */
+/* 16:9 colorway photography now fills the complete product canvas. */
+.color-layout{grid-template-columns:minmax(0,1fr) 250px;align-items:start}
+.stage{height:auto;min-height:0;max-height:none;aspect-ratio:16/9;background:#d8d8d5}
+.stage img{width:100%;height:100%;object-fit:cover;display:block}
+.color-name{left:26px;bottom:22px;padding:8px 11px;background:rgba(242,242,239,.82);backdrop-filter:blur(8px)}
+
+/* Keep the 360 interaction minimal and predictable. */
+.angle-dial{display:none!important}
+.spin-viewer{cursor:grab;touch-action:none}
+.spin-viewer.dragging{cursor:grabbing}
+.spin-badge{border-radius:0;padding:10px 13px;background:rgba(10,10,10,.82)}
+.spin-viewer.used .spin-badge{opacity:.58}
+.spin-viewer:not(.used) .spin-badge{animation:none}
+.spin-arrows{animation:nudgeArrow 1.4s ease-in-out infinite}
+.spin-ui{pointer-events:none}
+@media(max-width:800px){.stage{height:auto;min-height:0;aspect-ratio:16/9}.stage img{width:100%;height:100%}}
+
+/* --- V5 requested fixes --- */
+/* Hero: use the supplied square product image in full, with zero crop. */
+.hero-media{background:#d5d5d2}
+.hero-media img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+
+/* 360: simple, immediately readable label; interaction stays drag/swipe based. */
+.spin-badge{top:26px;right:28px;padding:0;background:transparent;color:#111;border:0;display:flex;flex-direction:column;align-items:flex-end;gap:1px;backdrop-filter:none}
+.spin-badge strong{font:700 24px/1 Arial,Helvetica,sans-serif;letter-spacing:-1px;border-bottom:1px solid #111;padding-bottom:3px}
+.spin-badge small{font:9px/1.2 monospace;letter-spacing:2px;opacity:.72;margin-top:3px}
+.spin-viewer.used .spin-badge{opacity:.72}
+.spin-line i{transition:none}
+
+/* Final panel: give the typography real breathing room from the video edge. */
+.final>div:last-child{padding-left:clamp(70px,6.2vw,110px);padding-right:4vw}
+.final>div:last-child .eyebrow,.final>div:last-child h2,.final>div:last-child a{margin-left:0}
+
+@media(max-width:800px){
+  .hero-media img{object-fit:contain}
+  .spin-badge{top:18px;right:18px}
+  .spin-badge strong{font-size:20px}
+  .final>div:last-child{padding:10vh 6vw}
+}
+
+/* --- V6 delivery polish --- */
+/* Keep the supplied motion clip sharp: don't blow a 960px source up into a giant viewport. */
+.final{min-height:0;height:min(78vh,760px)}
+.final-media{height:100%;min-height:0;background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.final-media video{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center;display:block;filter:none;transform:none}
+.final>div:last-child{height:100%;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+
+/* Small interaction polish without adding layout weight. */
+.spin-viewer img{will-change:contents}
+.swatch:focus-visible,.final a:focus-visible,header a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(max-width:800px){
+  .final{height:auto;min-height:0}
+  .final-media{height:min(72vh,620px);min-height:0}
+  .final-media video{height:100%;min-height:0}
+  .final>div:last-child{height:auto;min-height:58vh}
+}
+@media(max-width:800px){header{height:62px;padding-left:20px;padding-right:20px}.brand img{width:100px}.hero{min-height:0}.hero-copy{min-height:46svh;padding:7vh 20px 4vh}.hero-media{min-height:42svh}.hero h1{font-size:18vw}.lede{font-size:14px;margin:28px 0}.meta{flex-wrap:wrap;gap:10px 18px}.statement{padding:8vh 20px}.action-copy{padding:70px 20px}.action img{max-height:78svh}.colors{padding:70px 20px}.section-head{align-items:flex-start;gap:25px}.section-head h2{font-size:16vw}.motion{padding:70px 20px}.motion h2{font-size:15vw}.spin-viewer,.spin-viewer img{min-height:0;aspect-ratio:1/1}.spec{padding:0 20px 70px}.final>div:last-child{padding:70px 20px;min-height:52svh}.final h2{font-size:17vw}footer{height:auto;min-height:86px;padding:20px;gap:10px;flex-wrap:wrap}}@media(max-width:430px){.meta span:last-child{width:100%}.swatches{grid-template-columns:1fr 1fr}.swatch{padding:17px 4px}.spin-badge{top:14px;right:14px}.spin-ui{left:14px;right:14px}}
+
+/* Unified portfolio footer */
+.site-footer{height:auto;min-height:100px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:22px 3.5vw}
+.site-footer a{color:inherit;text-decoration:none}.site-footer span:last-child{text-align:right}
+@media(max-width:800px){.site-footer{min-height:92px;padding:20px;grid-template-columns:1fr;gap:8px}.site-footer span:last-child{text-align:left}}
