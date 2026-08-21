@@ -451,14 +451,13 @@ nav{display:flex;gap:34px;font-size:11px;font-weight:700;letter-spacing:1.3px}
   height:100%;
   max-width:none;
 
-  /* Keep complete composition visible */
+  /* IMPORTANT:
+     show the ENTIRE video instead of cropping it */
   object-fit:contain;
-  object-position:center center;
 
-  /* Fill the panel slightly more without
-     aggressively cropping the shoes */
-  transform:scale(1.06);
-  transform-origin:center center;
+  /* slightly favour the lower part of the frame
+     so the shoes remain visible */
+  object-position:center 58%;
 
   background:#111;
 }
@@ -648,7 +647,6 @@ header a:focus-visible{
 
 
   /* FINAL TABLET */
-
   .final{
     height:auto;
     min-height:0;
@@ -668,10 +666,6 @@ header a:focus-visible{
     height:100%;
     object-fit:contain;
     object-position:center center;
-
-    /* less enlargement on tablets */
-    transform:scale(1.035);
-    transform-origin:center center;
   }
 
   .final>div:not(.final-media){
@@ -857,7 +851,6 @@ header a:focus-visible{
 
 
   /* FINAL PHONE */
-
   .final{
     display:grid;
     grid-template-columns:1fr;
@@ -876,14 +869,9 @@ header a:focus-visible{
 
   .final-media video{
     width:100%;
-    height:auto;
-    max-width:100%;
+    height:100%;
     object-fit:contain;
     object-position:center center;
-
-    /* no zoom at all on phone */
-    transform:none;
-
     background:#111;
   }
 
