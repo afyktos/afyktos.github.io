@@ -897,3 +897,49 @@ header a:focus-visible{
     text-align:left;
   }
 }
+
+/* ===== NOVA RUN — MOBILE FINAL FIX ===== */
+@media (max-width:599px){
+
+  .final{
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    min-height:0;
+  }
+
+  .final>div:not(.final-media){
+    order:1;
+    min-height:0;
+    height:auto;
+    padding:46px 18px 42px;
+  }
+
+  .final h2{
+    font-size:clamp(56px,16vw,80px);
+    line-height:.78;
+  }
+
+  .final a{
+    margin-top:38px;
+  }
+
+  .final-media{
+    order:2;
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    background:#111;
+  }
+
+  .final-media video{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+  }
+
+}
