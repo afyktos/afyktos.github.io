@@ -1,0 +1,12 @@
+GITHUB PAGES DELIVERY
+
+Target URL: https://afyktos.com/tsobanoudi/
+
+Upload the contents of this folder into the /tsobanoudi/ directory of the GitHub Pages repository.
+Keep the folder structure exactly as supplied. All site links and asset paths are relative and work from /tsobanoudi/.
+
+Before production handoff:
+- Confirm final project names/locations with the client.
+- Connect the contact form to the preferred backend if direct form submission is required.
+- Add confirmed Instagram/Facebook links.
+- If the owner needs self-service uploads, connect the project archive to a CMS.
