@@ -1,4 +1,5 @@
-const images = [...document.querySelectorAll('main figure img')];
+const figures = [...document.querySelectorAll('main figure')];
+const images = figures.map(figure => figure.querySelector('img'));
 const lightbox = document.querySelector('.lightbox');
 const viewer = lightbox.querySelector('figure img');
 const caption = lightbox.querySelector('figcaption');
@@ -27,15 +28,17 @@ function openViewer(index) {
 function closeViewer() {
   lightbox.hidden = true;
   document.body.classList.remove('no-scroll');
-  images[current].focus();
+  figures[current].focus();
 }
 
-images.forEach((image, index) => {
-  image.tabIndex = 0;
-  image.setAttribute('role', 'button');
-  image.setAttribute('aria-label', `Άνοιγμα εικόνας: ${image.alt}`);
-  image.addEventListener('click', () => openViewer(index));
-  image.addEventListener('keydown', event => {
+figures.forEach((figure, index) => {
+  const image = images[index];
+  figure.classList.add('viewer-item');
+  figure.tabIndex = 0;
+  figure.setAttribute('role', 'button');
+  figure.setAttribute('aria-label', `Άνοιγμα εικόνας: ${image.alt}`);
+  figure.addEventListener('click', () => openViewer(index));
+  figure.addEventListener('keydown', event => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       openViewer(index);

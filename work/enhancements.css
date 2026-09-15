@@ -1,0 +1,21 @@
+html{background:#eaf5f8}
+body{background:linear-gradient(180deg,#dbeef4 0,#f7fbfc 560px,#fff 980px)}
+.intro:before{border-radius:99px}
+.main-poster{border:1px solid rgba(255,255,255,.85);border-radius:18px;background:linear-gradient(145deg,#badbe7,#eaf5f8 70%);box-shadow:0 18px 44px rgba(35,79,97,.13);overflow:hidden}
+.main-poster img{box-shadow:0 24px 56px rgba(29,64,78,.2)}
+figure.viewer-item{cursor:zoom-in;outline:0}
+.viewer-item>img{transition:transform .28s ease,filter .28s ease}
+.viewer-item:hover>img{transform:scale(1.006);filter:brightness(.985)}
+.viewer-item:focus-visible{outline:3px solid var(--blue-deep);outline-offset:4px}
+.viewer-item:after{content:"+";position:absolute;top:14px;right:14px;z-index:5;display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.68);border-radius:50%;background:rgba(18,45,57,.62);color:#fff;font-size:20px;line-height:1;box-shadow:0 5px 18px rgba(0,0,0,.15);backdrop-filter:blur(6px);pointer-events:none}
+.applications figure,.spreads figure,.printed figure,.sports-posters figure,.wide-image{border:1px solid #dce8ec;border-radius:12px;box-shadow:0 9px 27px rgba(35,79,97,.08);overflow:hidden}
+.applications figure:last-child,.wide-image{background:linear-gradient(150deg,#f8fbfc,#e9f4f7)}
+.real{border-radius:14px;background:linear-gradient(135deg,#c4e1eb,#eef7fa);box-shadow:0 15px 38px rgba(35,79,97,.11)}
+.real figure{overflow:hidden;border-radius:8px}
+.second-project{padding-right:32px;border:1px solid #d8e7ec;border-radius:16px;background:linear-gradient(135deg,#dceef4,#f7fbfc);box-shadow:0 12px 32px rgba(35,79,97,.08)}
+.lightbox{background:rgba(6,18,23,.97);backdrop-filter:blur(12px)}
+.lightbox figure{cursor:default}
+.lightbox figure:after{display:none}
+.lightbox button{border:1px solid rgba(255,255,255,.18);border-radius:50%;background:rgba(255,255,255,.07)}
+@media(max-width:700px){.main-poster{border-radius:14px}.second-project{padding-right:20px;border-radius:13px}.viewer-item:after{top:10px;right:10px;width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){.viewer-item>img{transition:none}}
