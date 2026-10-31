@@ -1,10 +1,24 @@
 (() => {
   'use strict';
+  if (location.protocol !== 'file:' && location.pathname.endsWith('/index.html')) {
+    history.replaceState(null, '', location.pathname.slice(0, -10) + location.search + location.hash);
+  }
+  if (location.protocol === 'file:') {
+    const portfolioPage = /\/(art|music)\/index\.html$/.test(location.pathname);
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === '/') { link.setAttribute('href', portfolioPage ? '../index.html' : 'index.html'); return; }
+      const destination = new URL(href, location.href);
+      if (destination.protocol === 'file:' && destination.pathname.endsWith('/')) {
+        destination.pathname += 'index.html';
+        link.href = destination.href;
+      }
+    });
+  }
   // Keep every appended record behind the same editorial boundary.
   const groups = [
     ['#collaborations .pc-grid', '.pc-card', 'The Twilight Zone', 9, 'collaborations'],
-    ['#remixes .pc-grid', '.pc-card', null, 3, 'remixes'],
-    ['.cover-grid', '.project', 'The Twilight Zone', 9, 'artworks']
+    ['#remixes .pc-grid', '.pc-card', null, 3, 'remixes']
   ];
   for (const [selector, itemSelector, boundary, fallback, name] of groups) {
     const grid = document.querySelector(selector);
