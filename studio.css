@@ -1,0 +1,16 @@
+/* Shared visual language across the landing page and both portfolios. */
+:root{--studio-paper:#f1f0e9;--studio-line:#35362f;--studio-accent:#bcc4a5;--studio-muted:#aaa99e}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a:focus-visible,button:focus-visible,[role="button"]:focus-visible{outline:2px solid var(--studio-accent);outline-offset:4px}
+button{font-family:'DM Mono',monospace}
+.site-header nav a,.eyebrow,.hero-kicker,.contact-intro{letter-spacing:.08em}
+.show-more,.assets-more{display:flex!important;align-items:center;justify-content:center;min-height:56px!important;margin:24px 0 12px!important;border:1px solid #707361!important;background:#12140f!important;color:var(--studio-paper)!important;font:400 11px/1.8 'DM Mono',monospace!important;letter-spacing:.08em!important;transition:background .18s,color .18s}
+.show-more:hover,.assets-more:hover{background:var(--studio-paper)!important;color:#10110c!important}
+.asset-buy,.pc-buy,.pc-buy-off{letter-spacing:.05em!important}
+.asset-card,.pc-card{border-color:var(--studio-line)!important}
+.asset-card:first-child{border-color:#7c8663!important}
+.assets-footnote,.omni-caption{color:var(--studio-muted)}
+.design-assets.section{padding-block:clamp(48px,5vw,72px)!important}
+.contact .return-home a{min-height:54px;font-family:'DM Mono',monospace;letter-spacing:.07em}
+.omni-switch{transition:background .18s,color .18s}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
