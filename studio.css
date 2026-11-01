@@ -13,4 +13,8 @@ button{font-family:'DM Mono',monospace}
 .design-assets.section{padding-block:clamp(48px,5vw,72px)!important}
 .contact .return-home a{min-height:54px;font-family:'DM Mono',monospace;letter-spacing:.07em}
 .omni-switch{transition:background .18s,color .18s}
+.site-header nav .nav-shop{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px!important;padding:10px 16px!important;border:1px solid #909187!important;color:var(--studio-paper);white-space:nowrap;font:400 10px/1.6 'DM Mono',monospace;letter-spacing:.06em;flex-shrink:0}
+.site-header nav .nav-shop:hover{background:var(--studio-paper);color:#080808}
+@media(min-width:981px){.site-header nav{flex:1;justify-content:flex-end;margin-left:32px}.site-header nav .nav-shop{margin-left:8px}}
+@media(max-width:980px){.site-header nav .nav-shop{width:auto!important;align-self:flex-end!important;margin:12px 0 0!important;min-width:132px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
